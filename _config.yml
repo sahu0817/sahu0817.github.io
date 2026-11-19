@@ -1,3 +1,21 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Srinivas Sahu
+tagline: Streaming data, Kafka, Flink and cloud-native platforms
+description: Code, demos and knowledge base on data streaming and event-driven architectures.
+github_username: sahu0817
+# linkedin_username: your-linkedin-id   # uncomment and fill in to show a LinkedIn link
+# email: you@example.com                # uncomment to show an email link
+
+# Top navigation (order matters)
+nav:
+  - title: Home
+    url: /
+  - title: Code
+    url: /code/
+  - title: Demos
+    url: /demos/
+  - title: KB
+    url: /kb/
+
+markdown: kramdown
+exclude:
+  - README.md
