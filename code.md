@@ -11,6 +11,11 @@ permalink: /code/
 ## Featured repositories
 
 <div class="cards">
+  <a class="card" href="https://github.com/{{ site.github_username }}/ibm">
+    <h3>IBM</h3>
+    <p>IBM resources and examples, including IBM Event Streams.</p>
+    <span class="tag">IBM</span>
+  </a>
   <a class="card" href="https://github.com/{{ site.github_username }}/confluent">
     <h3>Confluent</h3>
     <p>Confluent Platform and Cloud resources: clients, connectors, Flink, disaster recovery, monitoring and CLI commands.</p>
