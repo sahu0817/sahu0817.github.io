@@ -11,14 +11,9 @@ permalink: /code/
 ## Featured repositories
 
 <div class="cards">
-  <a class="card" href="https://github.com/{{ site.github_username }}/REPO-NAME">
-    <h3>Project name</h3>
-    <p>One-line description of what this repository does.</p>
+  <a class="card" href="https://github.com/{{ site.github_username }}/langchain">
+    <h3>LangChain</h3>
+    <p>Hands-on examples and a demo for building LLM-powered applications with LangChain.</p>
     <span class="tag">Python</span>
-  </a>
-  <a class="card" href="https://github.com/{{ site.github_username }}/REPO-NAME">
-    <h3>Project name</h3>
-    <p>One-line description of what this repository does.</p>
-    <span class="tag">Java</span>
   </a>
 </div>
