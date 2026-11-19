@@ -30,4 +30,4 @@ title: Home
 
 ## About
 
-Replace this paragraph with a short introduction: your role, what you work on, and what visitors can find here.
+Dynamic and accomplished Data Streaming Architect specializing in the design, implementation, and optimization of highly available, low-latency streaming solutions with Confluent Cloud, Kafka Connect, and Apache Flink across AWS, GCP, and Azure. Builds robust, scalable pipelines that support operational and analytical workloads in public and hybrid cloud environments, delivering governed streaming-to-table ingestion into enterprise data lakes, Databricks, and Snowflake lakehouses.
