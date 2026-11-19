@@ -72,7 +72,12 @@ code {
 .nav a.active { color: var(--accent); background: #eff4ff; }
 
 /* Hero */
-.hero { padding: 2.5rem 0 1rem; }
+.hero { padding: 2.5rem 0 1rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; }
+.hero-logos { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; padding-top: .5rem; }
+.hero-logos a { display: inline-flex; }
+.hero-logos img { width: auto; opacity: .9; }
+.hero-logos a:first-child img { height: 28px; }
+.hero-logos a:last-child img { height: 20px; }
 .hero .eyebrow {
   color: var(--accent);
   font-weight: 600;
@@ -135,5 +140,7 @@ code {
 .footer-inner .links a { margin-left: 1rem; }
 
 @media (max-width: 600px) {
+  .hero { flex-direction: column; }
+  .hero-logos { flex-direction: row; align-items: center; }
   .hero h1 { font-size: 2.1rem; }
 }
