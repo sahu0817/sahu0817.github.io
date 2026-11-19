@@ -11,12 +11,6 @@ title: Home
   <a class="btn secondary" href="https://github.com/{{ site.github_username }}">GitHub profile</a>
 </section>
 
-<div class="logos">
-  <span class="logos-label">Platforms I work with</span>
-  <a href="https://www.confluent.io" aria-label="Confluent"><img src="{{ '/assets/img/confluent.png' | relative_url }}" alt="Confluent" class="logo logo-confluent"></a>
-  <a href="https://www.ibm.com" aria-label="IBM"><img src="{{ '/assets/img/ibm.svg' | relative_url }}" alt="IBM" class="logo logo-ibm"></a>
-</div>
-
 ## Explore
 
 <div class="cards">
