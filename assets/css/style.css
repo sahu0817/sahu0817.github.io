@@ -59,7 +59,7 @@ code {
   gap: 1rem;
   flex-wrap: wrap;
 }
-.brand { font-weight: 700; font-size: 1.35rem; color: var(--text); }
+.brand { font-weight: 700; font-size: 1.65rem; color: var(--text); }
 .brand:hover { text-decoration: none; color: var(--accent); }
 .nav { display: flex; gap: .25rem; }
 .nav a {
