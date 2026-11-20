@@ -6,7 +6,6 @@ title: Home
 <section class="hero">
   <div class="hero-text">
     <p class="eyebrow">Welcome</p>
-    <h1>{{ site.title }}</h1>
     <p class="lead">{{ site.tagline }}. This site collects my code samples, working demos and notes I find worth keeping.</p>
     <a class="btn" href="{{ '/demos/' | relative_url }}">Browse demos</a>
     <a class="btn secondary" href="https://github.com/{{ site.github_username }}">GitHub profile</a>

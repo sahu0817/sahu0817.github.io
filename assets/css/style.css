@@ -59,7 +59,7 @@ code {
   gap: 1rem;
   flex-wrap: wrap;
 }
-.brand { font-weight: 700; font-size: 1.1rem; color: var(--text); }
+.brand { font-weight: 700; font-size: 1.35rem; color: var(--text); }
 .brand:hover { text-decoration: none; color: var(--accent); }
 .nav { display: flex; gap: .25rem; }
 .nav a {
@@ -86,7 +86,6 @@ code {
   letter-spacing: .08em;
   margin: 0 0 .5rem;
 }
-.hero h1 { font-size: 2.75rem; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); max-width: 640px; margin: .5rem 0 1.5rem; }
 
 .btn {
@@ -142,5 +141,4 @@ code {
 @media (max-width: 600px) {
   .hero { flex-direction: column; }
   .hero-logos { flex-direction: row; align-items: center; }
-  .hero h1 { font-size: 2.1rem; }
 }
