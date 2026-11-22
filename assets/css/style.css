@@ -1,4 +1,20 @@
+/* Dark grey is the default theme; light is applied via data-theme="light" */
 :root {
+  color-scheme: dark;
+  --bg: #2b2d30;
+  --surface: #34373b;
+  --border: #4a4d52;
+  --text: #e8e9eb;
+  --muted: #aeb2b8;
+  --accent: #6ea8fe;
+  --accent-dark: #9ec5fe;
+  --on-accent: #17191c;
+  --header-bg: rgba(43, 45, 48, .95);
+  --active-bg: rgba(110, 168, 254, .16);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
   --bg: #ffffff;
   --surface: #f7f8fa;
   --border: #e5e7eb;
@@ -6,6 +22,9 @@
   --muted: #57606a;
   --accent: #2563eb;
   --accent-dark: #1d4ed8;
+  --on-accent: #ffffff;
+  --header-bg: rgba(255, 255, 255, .95);
+  --active-bg: #eff4ff;
 }
 
 * { box-sizing: border-box; }
@@ -48,7 +67,7 @@ code {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, .95);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--border);
 }
 .header-inner {
@@ -69,7 +88,44 @@ code {
   font-weight: 500;
 }
 .nav a:hover { background: var(--surface); color: var(--text); text-decoration: none; }
-.nav a.active { color: var(--accent); background: #eff4ff; }
+.nav a.active { color: var(--accent); background: var(--active-bg); }
+
+/* Theme toggle switch */
+.header-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--muted);
+  font: inherit;
+  font-size: .85rem;
+}
+.theme-toggle .track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--border);
+  transition: background .15s;
+}
+.theme-toggle .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  transition: transform .15s;
+}
+.theme-toggle[aria-checked="true"] .track { background: var(--accent); }
+.theme-toggle[aria-checked="true"] .knob { transform: translateX(18px); border-color: var(--on-accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 999px; }
 
 /* Hero */
 .hero { padding: 2.5rem 0 1rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; }
@@ -78,6 +134,9 @@ code {
 .hero-logos img { width: auto; opacity: .9; }
 .hero-logos a:first-child img { height: 28px; }
 .hero-logos a:last-child img { height: 20px; }
+/* Confluent logo is dark navy; show it white on the dark theme, IBM blue slightly lighter */
+:root:not([data-theme="light"]) .hero-logos a:first-child img { filter: brightness(0) invert(1); }
+:root:not([data-theme="light"]) .hero-logos a:last-child img { filter: brightness(1.5); }
 .hero .eyebrow {
   color: var(--accent);
   font-weight: 600;
@@ -95,12 +154,12 @@ code {
   font-weight: 600;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   margin-right: .5rem;
 }
-.btn:hover { background: var(--accent-dark); color: #fff; text-decoration: none; }
+.btn:hover { background: var(--accent-dark); color: var(--on-accent); text-decoration: none; }
 .btn.secondary { background: transparent; color: var(--accent); }
-.btn.secondary:hover { background: #eff4ff; color: var(--accent-dark); }
+.btn.secondary:hover { background: var(--active-bg); color: var(--accent-dark); }
 
 /* Cards */
 .cards {
