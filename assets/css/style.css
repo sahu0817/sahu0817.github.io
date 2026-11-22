@@ -1,16 +1,16 @@
 /* Dark grey is the default theme; light is applied via data-theme="light" */
 :root {
   color-scheme: dark;
-  --bg: #2b2d30;
-  --surface: #34373b;
-  --border: #4a4d52;
+  --bg: #3b3e43;
+  --surface: #464a50;
+  --border: #5c6067;
   --text: #e8e9eb;
-  --muted: #aeb2b8;
-  --accent: #6ea8fe;
-  --accent-dark: #9ec5fe;
+  --muted: #bfc3c9;
+  --accent: #82b6ff;
+  --accent-dark: #a9cdff;
   --on-accent: #17191c;
-  --header-bg: rgba(43, 45, 48, .95);
-  --active-bg: rgba(110, 168, 254, .16);
+  --header-bg: rgba(59, 62, 67, .95);
+  --active-bg: rgba(130, 182, 255, .16);
 }
 
 [data-theme="light"] {
