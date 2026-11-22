@@ -90,42 +90,44 @@ code {
 .nav a:hover { background: var(--surface); color: var(--text); text-decoration: none; }
 .nav a.active { color: var(--accent); background: var(--active-bg); }
 
-/* Theme toggle switch */
-.header-right { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+/* Theme toggle: sliding switch with sun / moon icons */
+.header-right { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
 .theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  background: none;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  color: var(--muted);
-  font: inherit;
-  font-size: .85rem;
-}
-.theme-toggle .track {
   position: relative;
-  width: 40px;
-  height: 22px;
+  flex: none;
+  width: 56px;
+  height: 28px;
+  margin-left: .75rem;
+  padding: 0;
+  border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--border);
-  transition: background .15s;
+  background: var(--surface);
+  cursor: pointer;
 }
 .theme-toggle .knob {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 16px;
-  height: 16px;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--muted);
-  transition: transform .15s;
+  background: var(--accent);
+  transition: transform .2s ease;
 }
-.theme-toggle[aria-checked="true"] .track { background: var(--accent); }
-.theme-toggle[aria-checked="true"] .knob { transform: translateX(18px); border-color: var(--on-accent); }
-.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 999px; }
+.theme-toggle[aria-checked="true"] .knob { transform: translateX(26px); }
+.theme-toggle .icon {
+  position: absolute;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  color: var(--muted);
+  transition: color .2s ease;
+}
+.theme-toggle .sun { left: 6px; }
+.theme-toggle .moon { left: 32px; }
+.theme-toggle[aria-checked="true"] .moon,
+.theme-toggle[aria-checked="false"] .sun { color: var(--on-accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Hero */
 .hero { padding: 2.5rem 0 1rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; }
