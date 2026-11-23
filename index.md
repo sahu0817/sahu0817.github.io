@@ -33,7 +33,7 @@ title: Home
   </a>
 </div>
 
-## About
+## About Me
 
 I am a dynamic and accomplished Data Streaming Architect specializing in the design, implementation, and optimization of highly available, low-latency streaming solutions with Confluent Cloud, Kafka Connect, and Apache Flink across AWS, GCP, and Azure.
 
